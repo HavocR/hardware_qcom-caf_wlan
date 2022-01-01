@@ -19,7 +19,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_CFLAGS := -Wno-unused-parameter
-LOCAL_CFLAGS += -Wall -Werror
+LOCAL_CFLAGS += -Wall
 LOCAL_MODULE := libwifi-hal-ctrl
 LOCAL_VENDOR_MODULE := true
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/wifi_hal_ctrl
@@ -49,7 +49,7 @@ endif
 # gscan.cpp: address of array 'cached_results[i].results' will always evaluate to 'true'
 LOCAL_CLANG_CFLAGS := -Wno-pointer-bool-conversion
 
-LOCAL_CFLAGS += -Wall -Werror
+LOCAL_CFLAGS += -Wall
 
 ifdef WIFI_DRIVER_STATE_CTRL_PARAM
 LOCAL_CFLAGS += -DWIFI_DRIVER_STATE_CTRL_PARAM=\"$(WIFI_DRIVER_STATE_CTRL_PARAM)\"
@@ -113,7 +113,7 @@ include $(CLEAR_VARS)
 
 LOCAL_REQUIRED_MODULES :=
 
-LOCAL_CFLAGS += -Wno-unused-parameter -Wall -Werror
+LOCAL_CFLAGS += -Wno-unused-parameter -Wall
 LOCAL_CPPFLAGS += -Wno-conversion-null
 ifeq ($(TARGET_BUILD_VARIANT),userdebug)
 LOCAL_CFLAGS += "-DLOG_NDEBUG=0"
@@ -165,7 +165,7 @@ LOCAL_SRC_FILES := \
 	tcp_params_update.cpp \
 	wifihal_vendor.cpp
 
-LOCAL_CFLAGS += -Wall -Werror
+LOCAL_CFLAGS += -Wall
 LOCAL_MODULE := libwifi-hal-qcom
 LOCAL_VENDOR_MODULE := true
 LOCAL_CLANG := true

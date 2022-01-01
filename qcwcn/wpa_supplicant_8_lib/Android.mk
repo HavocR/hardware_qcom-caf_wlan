@@ -54,7 +54,7 @@ ifdef CONFIG_P2P
 L_CFLAGS += -DCONFIG_P2P
 endif
 
-L_CFLAGS += -Werror
+#L_CFLAGS += -Werror
 
 ########################
 
